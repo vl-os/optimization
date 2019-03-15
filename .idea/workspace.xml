@@ -89,6 +89,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -139,6 +142,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -188,7 +192,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Laba3_5p_GR_FN">
+  <component name="RunManager" selected="Application.Laba4">
     <configuration name="Laba3_5p_GR_FN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Laba3_5p_GR_FN" />
       <module name="Optimization" />
@@ -217,8 +221,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Laba3_5p_GR_FN" />
         <item itemvalue="Application.Laba4" />
+        <item itemvalue="Application.Laba3_5p_GR_FN" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -246,12 +250,12 @@
       <workItem from="1552561858014" duration="390000" />
       <workItem from="1552562280289" duration="3507000" />
       <workItem from="1552566069330" duration="101000" />
-      <workItem from="1552607182576" duration="17587000" />
+      <workItem from="1552607182576" duration="17905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73523000" />
+    <option name="totallyTimeSpent" value="73841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="27" width="1313" height="741" extended-state="6" />
@@ -271,7 +275,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32838285" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3294702" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32838285" />
