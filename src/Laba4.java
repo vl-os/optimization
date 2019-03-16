@@ -72,22 +72,17 @@ public class Laba4 {
                 p4s = new double[] { (points[1][0] + points[2][0]) / 2, (points[1][1] + points[2][1])/2 };
                 p5n = new double[] {p4s[0] * 2 - pmax[0], p4s[1] * 2 - pmax[1]};
                 p1 = p5n;
-                //p2 = p3;
-                //p3 = p2;
             }
             if (pmax == points[1]) {
                 p4s = new double[] { (points[0][0] + points[2][0]) / 2, (points[0][1] + points[2][1])/2 };
                 p5n = new double[] {p4s[0] * 2 - pmax[0], p4s[1] * 2 - pmax[1]};
                 p2 = p5n;
-
             }
             if (pmax == points[2]) {
                 p4s = new double[] { (points[0][0] + points[1][0]) / 2, (points[0][1] + points[1][1])/2 };
                 p5n = new double[] {p4s[0] * 2 - pmax[0], p4s[1] * 2 - pmax[1]};
                 p3 = p5n;
             }
-
-            //if (po)
 
             System.out.println("\n -----> z = " + max + "\tp1 = [" + p5n[0] + ", " + p5n[1] + "]");
 

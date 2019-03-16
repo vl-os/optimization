@@ -3,14 +3,17 @@ import java.util.Scanner;
 public class Laba3_5p_GR_FN {
 
     private static Scanner scanner = new Scanner(System.in);
-    private static double k5, k4, k3, k2, k1, accuracy;
+    private static double k5, k4, k3, k2, k1, accuracy, leftCorner, rightCorner, length;
     private static double[] xValues, yValues = new double[5];
-    private static double[] xValuesGR, yValuesGR = new double[4];
-    private static double leftCorner, rightCorner;
+    private static double[] yValuesGR = new double[4];
+    private static double[] xValuesF = new double[40],
+                            yValuesF = new double[40];
+
+
 
     public static void main(String[] args) {
 
-        System.out.println("Choose method of optimization for finding min of function: " +
+        System.out.println("Choose minimization method to find min of function: " +
                 "\n\t1 - Five Points" +
                 "\n\t2 - Golden Ratio" +
                 "\n\t3 - Fibonacci");
@@ -25,28 +28,66 @@ public class Laba3_5p_GR_FN {
                 getGoldenRatio();
                 break;
             case 3:
-                System.out.println("work in progress");
+                getFibonacci();
                 break;
         }
     }
 
     private static void getFibonacci() {
 
-        int[] fibonacciNumbers = new int[] {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584};
+        System.out.println("\n\t3x^2 + 4x^3");
+
+        System.out.println("Enter accuracy: ");
+        accuracy = scanner.nextDouble();
+        System.out.println("Enter left corner: ");
+        leftCorner = scanner.nextDouble();
+        System.out.println("Enter right corner: ");
+        rightCorner = scanner.nextDouble();
 
 
+        double[] fibonacciNumbers = FibonacciNum();
+        double range = (rightCorner - leftCorner) / accuracy;
+        double delta  = range;
+        int positionFib = fibonacciNumbers.length;
 
+        // Calculating delta
+        for (int i = 0; i < fibonacciNumbers.length; i++) {
+            if(fibonacciNumbers[i] == range) {
+                delta = (rightCorner - leftCorner) /  fibonacciNumbers[i];
+                positionFib = i;
+                break;
+            }
+            if(fibonacciNumbers[i] >= range) {
+                delta = (rightCorner - leftCorner) / fibonacciNumbers[i - 1];
+                positionFib = i;
+                break;
+            }
+        }
 
+        // Init first x and y(x) values
+        xValuesF[0] = leftCorner;
+        yValuesF[0] = 3 * Math.pow(xValuesF[0], 2) - 4 * Math.pow(xValuesF[0], 3);
 
+        // Fibonacci method
+        for (int i = 1; i < positionFib; i++) {
+            xValuesF[i] = xValuesF[i - 1] + delta * fibonacciNumbers[positionFib - i - 1];
+            // User function 3x^2 + 4x^3
+            yValuesF[i] = 3 * Math.pow(xValuesF[i], 2) + 4 * Math.pow(xValuesF[i], 3);
 
+            if (yValuesF[i] > yValuesF[i - 1]) {
+                xValuesF[i] = xValuesF[i - 1] - delta * fibonacciNumbers[positionFib - i - 1];
+                // User function
+                yValuesF[i] = 3 * Math.pow(xValuesF[i], 2) + 4 * Math.pow(xValuesF[i], 3);
+            }
+        }
 
+        // Print result
+        for (int i = 0; i < positionFib; i++) {
+            System.out.println(i + ":  x = " + xValuesF[i] +
+                        "\ty = " + yValuesF[i] +
+                   "\tfibNum = " + fibonacciNumbers[positionFib - i - 1]);
 
-
-
-
-
-
-
+        }
     }
 
     private static void getGoldenRatio() {
@@ -61,6 +102,7 @@ public class Laba3_5p_GR_FN {
         leftCorner = scanner.nextDouble();
         System.out.println("Enter right corner: ");
         rightCorner = scanner.nextDouble();
+
         int iteration = 1;
         double condition;
 
@@ -107,9 +149,7 @@ public class Laba3_5p_GR_FN {
                 }
             }
 
-
-
-            condition = (rightCorner - leftCorner)/4;
+            condition = (rightCorner - leftCorner) / 4;
             iteration++;
 
         } while (condition >= accuracy);
@@ -191,6 +231,17 @@ public class Laba3_5p_GR_FN {
                 (right + middle) / 2,
                 right};
         return xValues;
+    }
+
+    static public double[] FibonacciNum() {
+        double[] fibonacciNum = new double [40];
+        fibonacciNum[0] = 0;
+        fibonacciNum[1] = 1;
+
+        for (int i = 2; i < fibonacciNum.length; i++) {
+            fibonacciNum[i] = fibonacciNum[i-1] + fibonacciNum[i-2];
+        }
+        return fibonacciNum;
     }
 
 }
