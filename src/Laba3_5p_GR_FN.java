@@ -35,7 +35,7 @@ public class Laba3_5p_GR_FN {
 
     private static void getFibonacci() {
 
-        System.out.println("\n\t3x^2 + 4x^3");
+        System.out.println("\n\t3x^2 / 7x^3");
 
         System.out.println("Enter accuracy: ");
         accuracy = scanner.nextDouble();
@@ -66,18 +66,18 @@ public class Laba3_5p_GR_FN {
 
         // Init first x and y(x) values
         xValuesF[0] = leftCorner;
-        yValuesF[0] = 3 * Math.pow(xValuesF[0], 2) - 4 * Math.pow(xValuesF[0], 3);
+        yValuesF[0] = 3 * Math.pow(xValuesF[0], 2) / (7 * Math.pow(xValuesF[0], 3));
 
         // Fibonacci method
         for (int i = 1; i < positionFib; i++) {
             xValuesF[i] = xValuesF[i - 1] + delta * fibonacciNumbers[positionFib - i - 1];
-            // User function 3x^2 + 4x^3
-            yValuesF[i] = 3 * Math.pow(xValuesF[i], 2) + 4 * Math.pow(xValuesF[i], 3);
+            // User function 3x^2 / 4x^3
+            yValuesF[i] = 3 * Math.pow(xValuesF[i], 2) / (7 * Math.pow(xValuesF[i], 3));
 
             if (yValuesF[i] > yValuesF[i - 1]) {
                 xValuesF[i] = xValuesF[i - 1] - delta * fibonacciNumbers[positionFib - i - 1];
                 // User function
-                yValuesF[i] = 3 * Math.pow(xValuesF[i], 2) + 4 * Math.pow(xValuesF[i], 3);
+                yValuesF[i] = 3 * Math.pow(xValuesF[i], 2) / (7 * Math.pow(xValuesF[i], 3));
             }
         }
 
@@ -92,10 +92,7 @@ public class Laba3_5p_GR_FN {
 
     private static void getGoldenRatio() {
 
-        System.out.println("\n\tk1*x^2 + k2*x\nEnter k1: ");
-        k1 = scanner.nextDouble();
-        System.out.println("Enter k2: ");
-        k2 = scanner.nextDouble();
+        System.out.println("\n\t3x^2 / 7x^3");
         System.out.println("Enter accuracy: ");
         accuracy = scanner.nextDouble();
         System.out.println("Enter left corner: ");
@@ -110,8 +107,8 @@ public class Laba3_5p_GR_FN {
 
             double[] xValuesGR = new double[] {
                     leftCorner,
-                    leftCorner + (Math.abs(leftCorner) + Math.abs(rightCorner)) * 0.38,
-                    rightCorner - (Math.abs(leftCorner) + Math.abs(rightCorner)) * 0.38,
+                    leftCorner + (rightCorner - leftCorner) * 0.38,
+                    rightCorner - (rightCorner - leftCorner) * 0.38,
                     rightCorner
             };
 
@@ -120,19 +117,23 @@ public class Laba3_5p_GR_FN {
             // calculate X and Y values
             for (int i = 0; i < 4; i++) {
                 int j = i + 1;
-                // main function
-                yValuesGR[i] = k1 * Math.pow(xValuesGR[i], 2) + k2 * xValuesGR[i];
+                // main function 3x^2 / 7x^3
+                //yValuesGR[i] = 3 * Math.pow(xValuesGR[i], 2) / (7 * Math.pow(xValuesGR[i], 3));
+                yValuesGR[i] = (Math.pow(xValuesGR[i], 3) / 3) - (2.5 *  Math.pow(xValuesGR[i], 2)) + 6 * xValuesGR[i] + 2;
                 System.out.println("x" + j + " = " + xValuesGR[i] + " \t" + "\ty" + j + " = " + yValuesGR[i]);
             }
 
             // find min Y value
-            double min = yValuesGR[0];
-            for (int i = 1; i < 4; i++) {
-                if(yValuesGR[i] < min) {
-                    min = yValuesGR[i];
-                }
-            }
+            double min = yValuesGR[1];
+            leftCorner = xValuesGR[0];
+            rightCorner = xValuesGR[2];
 
+             if(yValuesGR[2] < min) {
+                 leftCorner = xValuesGR[1];
+                 rightCorner = xValuesGR[2];
+             }
+
+/*
             // get new left, mid and right x values;
             for (int i = 1; i < 3; i++) {
                 if (min == yValuesGR[i]) {
@@ -140,17 +141,22 @@ public class Laba3_5p_GR_FN {
                     rightCorner = xValuesGR[i + 1];
                 }
                 if (min == yValuesGR[0]) {
-                    leftCorner = xValuesGR[0];
+                    leftCorner = xValuesGR[0] - (xValuesGR[1] - xValuesGR[0]) / 0.62;
                     rightCorner = xValuesGR[1];
                 }
                 if (min == yValuesGR[3]) {
                     leftCorner = xValuesGR[2];
-                    rightCorner = xValuesGR[3];
+                    rightCorner = xValuesGR[3] + (xValuesGR[3] - xValuesGR[2]) / 0.62;
                 }
             }
+*/
 
             condition = (rightCorner - leftCorner) / 4;
             iteration++;
+
+/*            if (iteration == 11) {
+                break;
+            }*/
 
         } while (condition >= accuracy);
 
@@ -158,10 +164,7 @@ public class Laba3_5p_GR_FN {
 
     private static void getFivePoints() {
 
-        System.out.println("\n\tk1*x^2 + k2*x\nEnter k1: ");
-        k1 = scanner.nextDouble();
-        System.out.println("Enter k2: ");
-        k2 = scanner.nextDouble();
+        System.out.println("\n\t3x^2 / 7x^3");
         System.out.println("Enter accuracy: ");
         accuracy = scanner.nextDouble();
         System.out.println("Enter left corner: ");
@@ -172,12 +175,10 @@ public class Laba3_5p_GR_FN {
 
         // Init first iteration
         double middleRange = (leftCorner + rightCorner) / 2;
-        //xValues = getXValues(leftCorner, middleRange, rightCorner);
         int iteration = 1;
         double condition;
 
         do {
-
             xValues = getXValues(leftCorner, middleRange, rightCorner);
 
             System.out.println("= = = = = = = = = = = = = \n\nIteration : " + iteration + "\n");
@@ -185,8 +186,9 @@ public class Laba3_5p_GR_FN {
             // calculate X and Y values
             for (int i = 0; i < 5; i++) {
                 int j = i + 1;
-                // main function
-                yValues[i] = k1 * Math.pow(xValues[i], 2) + k2 * xValues[i] - 5;
+                // main function 3x^2 + 4x^3    x x −1
+                //yValues[i] = 3 * Math.pow(xValues[i], 2) / (7 * Math.pow(xValues[i], 3) +10);
+                yValues[i] = (Math.pow(xValues[i], 3) / 3) - (2.5 *  Math.pow(xValues[i], 2)) + 6 * xValues[i] + 2;
                 System.out.println("x" + j + " = " + xValues[i] + " \t" + "\ty" + j + " = " + yValues[i]);
             }
 
@@ -223,6 +225,8 @@ public class Laba3_5p_GR_FN {
             iteration++;
         } while (condition >= accuracy);
     }
+
+
 
     private static double[] getXValues(double left, double middle, double right) {
        double[] xValues = new double[]{ left,

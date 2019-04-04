@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31ff625e-a8cd-4509-a646-0df36a4f4791" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/Optimization/trash.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Laba5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Optimization/Laba3_5p_GR_FN.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Optimization/Laba3_5p_GR_FN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Optimization/Laba4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Optimization/Laba4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Laba3_5p_GR_FN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Laba3_5p_GR_FN.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Laba4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Laba4.java" afterDir="false" />
     </list>
@@ -17,41 +20,45 @@
     <session id="-402785676">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="4" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.37" value="1" />
-          <entry key="project.open.time.54" value="1" />
+          <entry key="project.open.time.54" value="2" />
           <entry key="project.open.time.55" value="1" />
-          <entry key="project.open.time.57" value="1" />
-          <entry key="project.open.time.58" value="2" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.open.time.57" value="2" />
+          <entry key="project.open.time.58" value="4" />
+          <entry key="project.open.time.62" value="1" />
+          <entry key="project.open.time.77" value="1" />
+          <entry key="project.open.time.87" value="1" />
+          <entry key="project.open.time.96" value="1" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="7" />
+          <entry key="java" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="7" />
+          <entry key="JAVA" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="23" />
-          <entry key="java" value="10383" />
+          <entry key="java" value="14245" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10383" />
+          <entry key="JAVA" value="14245" />
           <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
@@ -59,15 +66,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Laba3_5p_GR_FN.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Laba5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="68" column="82" lean-forward="true" selection-start-line="68" selection-start-column="82" selection-end-line="68" selection-end-column="82" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Laba4.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-408">
+              <caret line="201" column="41" selection-start-line="201" selection-start-column="41" selection-end-line="201" selection-end-column="41" />
               <folding>
-                <element signature="method#getGoldenRatio#0;class#Laba3_5p_GR_FN#0" />
-                <element signature="method#getFivePoints#0;class#Laba3_5p_GR_FN#0" />
-                <element signature="method#getXValues#0;class#Laba3_5p_GR_FN#0" />
+                <element signature="class#Point#0;class#Laba4#0" />
+                <element signature="method#getScan#0;class#Laba4#0" />
+                <element signature="method#getSimplex#0;class#Laba4#0" />
               </folding>
             </state>
           </provider>
@@ -92,8 +108,9 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/GoldenRatio.java" />
         <option value="$PROJECT_DIR$/src/FivePoints.java" />
-        <option value="$PROJECT_DIR$/src/Laba4.java" />
         <option value="$PROJECT_DIR$/src/Laba3_5p_GR_FN.java" />
+        <option value="$PROJECT_DIR$/src/Laba5.java" />
+        <option value="$PROJECT_DIR$/src/Laba4.java" />
       </list>
     </option>
   </component>
@@ -141,7 +158,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,7 +175,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -185,7 +202,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Laba3_5p_GR_FN">
+  <component name="RunManager" selected="Application.Laba4">
     <configuration name="Laba3_5p_GR_FN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Laba3_5p_GR_FN" />
       <module name="Optimization" />
@@ -214,8 +231,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Laba3_5p_GR_FN" />
         <item itemvalue="Application.Laba4" />
+        <item itemvalue="Application.Laba3_5p_GR_FN" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -243,17 +260,26 @@
       <workItem from="1552561858014" duration="390000" />
       <workItem from="1552562280289" duration="3507000" />
       <workItem from="1552566069330" duration="101000" />
-      <workItem from="1552607182576" duration="26374000" />
+      <workItem from="1552607182576" duration="39463000" />
+      <workItem from="1553552470396" duration="174000" />
+      <workItem from="1553591690863" duration="3196000" />
+      <workItem from="1553623617852" duration="594000" />
+      <workItem from="1553718114417" duration="13220000" />
+      <workItem from="1553894350776" duration="597000" />
+      <workItem from="1554202517813" duration="669000" />
+      <workItem from="1554204733300" duration="1342000" />
+      <workItem from="1554380812624" duration="4668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82310000" />
+    <option name="totallyTimeSpent" value="119962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="27" width="1313" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2202052" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25177586" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -262,8 +288,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.7649007" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.46534654" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4536424" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.46523178" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -305,35 +331,30 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GoldenRatio.java" />
-    <entry file="file://$PROJECT_DIR$/src/trash.java">
+    <entry file="file://$PROJECT_DIR$/src/trash.java" />
+    <entry file="file://$PROJECT_DIR$/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/Laba3_5p_GR_FN.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="104" />
+        <state relative-caret-position="242">
+          <caret line="125" column="2" selection-start-line="125" selection-start-column="2" selection-end-line="135" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Laba5.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Laba4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Laba3_5p_GR_FN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="68" column="82" lean-forward="true" selection-start-line="68" selection-start-column="82" selection-end-line="68" selection-end-column="82" />
+        <state relative-caret-position="-408">
+          <caret line="201" column="41" selection-start-line="201" selection-start-column="41" selection-end-line="201" selection-end-column="41" />
           <folding>
-            <element signature="method#getGoldenRatio#0;class#Laba3_5p_GR_FN#0" />
-            <element signature="method#getFivePoints#0;class#Laba3_5p_GR_FN#0" />
-            <element signature="method#getXValues#0;class#Laba3_5p_GR_FN#0" />
+            <element signature="class#Point#0;class#Laba4#0" />
+            <element signature="method#getScan#0;class#Laba4#0" />
+            <element signature="method#getSimplex#0;class#Laba4#0" />
           </folding>
         </state>
       </provider>
