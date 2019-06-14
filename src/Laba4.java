@@ -14,7 +14,7 @@ public class Laba4 {
         System.out.println("Choose method of optimization for finding min of function: " +
                 "\n\t1 - Simplex Method" +
                 "\n\t2 - Scanning Method" +
-                "\n\t3 - Gauss");
+                "\n\t3 - Gauss-Seildel Method");
 
         int choise = scanner.nextInt();
 
@@ -199,7 +199,7 @@ public class Laba4 {
     static private void getG() {
 
         iteration = 0;
-        double zValue, min, previousValue, step = 0.1;
+        double zValue, min, previousValue, step = 0.05;
         double[] zValues = new double[4];
 
         double X = 0,
